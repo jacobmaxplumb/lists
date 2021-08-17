@@ -19,7 +19,7 @@ const TodoForm = ({addTodo}) => {
                     onChange={(e) => setValue(e.target.value)}
                 />
             </Form.Group>
-            <Button type="submit" variant="primary mb-3">Submit</Button>
+            <Button style={{marginTop: '5px'}} type="submit" variant="primary mb-3">Submit</Button>
         </Form>
     )
 }
