@@ -6,7 +6,8 @@ const TodoForm = ({addTodo}) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        addTodo(value);
+        const newTodo = {text: value, isDone: false};
+        addTodo(newTodo);
     }
 
     return (

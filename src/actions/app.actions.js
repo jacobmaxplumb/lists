@@ -13,6 +13,7 @@ export const addTodo = (todo) => {
 }
 
 export const markTodo = (index) => {
+    console.log(index);
     return ({type: MARK_TODO, index});
 }
 

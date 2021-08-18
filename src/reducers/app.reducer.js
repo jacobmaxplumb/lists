@@ -1,4 +1,4 @@
-import { addTodo, ADD_CONTACT, ADD_TODO, MARK_TODO, REMOVE_CONTACT, REMOVE_TODO } from "../actions/app.actions"
+import { ADD_CONTACT, ADD_TODO, MARK_TODO, REMOVE_CONTACT, REMOVE_TODO } from "../actions/app.actions"
 
 export const intialState = {
     todos: [{text: 'Do Stuff', isDone: false}],
@@ -8,16 +8,19 @@ export const intialState = {
 export const appReducer = (state, action) => {
     switch(action.type) {
         case MARK_TODO:
+            console.log(action);
             const markTodoState = {...state};
             markTodoState.todos[action.index].isDone = true;
             return markTodoState;
         case ADD_TODO:
+            console.log(action);
             const addTodoState = {...state};
             addTodoState.todos.push(action.todo);
             return addTodoState;
         case REMOVE_TODO:
+            console.log(action);
             const removeTodoState = {...state};
-            removeTodoState.todo.splice(action.index, 1);
+            removeTodoState.todos.splice(action.index, 1);
             return removeTodoState;
         case ADD_CONTACT:
             const addContactState = {...state};

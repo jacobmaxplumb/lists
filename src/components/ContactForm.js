@@ -7,7 +7,8 @@ const ContactForm = ({addContact}) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        addContact({name, number});
+        const newContact = {name, number}
+        addContact(newContact);
         setName('');
         setNumber('');
     }
